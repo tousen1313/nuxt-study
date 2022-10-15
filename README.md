@@ -1,69 +1,43 @@
-# nuxt-en-study
+# nuxt-study
 
-## Build Setup
+---
+### 目的
+現場で使う以下パッケージを学ぶ
+#### vue-property-decorator
+#### vuex-module-decorators
+#### pug
 
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+### その他目的
+github actionsでCI/CD環境を構築
+対象のブランチpush時に自動でテストを行う
 
 
-### `pages`
+### 使用技術・バージョン
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+| 技術 | version | 備考 |
+| ---- | ------- | ---- |
+| [vue-property-decorator](https://www.npmjs.com/package/vue-property-decorator) | ^9.1.2 | デコレータを使って書ける |
+| [vue-template-compiler](https://www.npmjs.com/package/vuex-module-decorators) | ^2.6.14 | getters, state, actionsの型安全性を保つ |
+| [pug](https://www.npmjs.com/package/pug) | ^3.0.2 | HTMLテンプレートエンジン |
+| [pug-loader](https://www.npmjs.com/package/pug-loader) | ^2.4.0 | pug用のローダー |
+| [pug-plain-loader](https://www.npmjs.com/package/pug-plain-loader) | ^1.1.0 | pug用プラグイン |
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
 
-### `plugins`
+### 動作環境
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+| デバイスの識別 | OS             | 対応ブラウザ       |
+| -------------- | -------------- | ------------------ |
+| PC             | macOS Monterey | Google chrome 最新 |
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+<!--rehype:style=color: black;-->
 
-### `static`
+## 基本設計
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+### サイトマップ
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+#### 画面名
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+| 画面名                           | URI                |
+| -------------------------------- | ------------------ |
+| ToDo                         | ToDo                 |
 
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
